@@ -1,0 +1,90 @@
+/* ---------------------
+   Base (Desktop)
+---------------------- */
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #121619;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.leftSide img {
+  width: 70px;
+}
+
+.logoTexte {
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rightSide a {
+  color: white;
+  text-decoration: none;
+
+}
+
+.rightSide button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.8rem;
+  display: none; /* caché par défaut (desktop) */
+}
+
+/* Hidden Links (Mobile menu) */
+.hiddenLinks {
+  display: none;
+}
+
+/* ---------------------
+   Mobile (max 768px)
+---------------------- */
+@media (max-width: 768px) {
+  .rightSide a {
+    display: none; /* cacher les liens normaux */
+  }
+
+  .rightSide button {
+    display: block;
+  }
+
+  .hiddenLinks {
+    display: flex;
+    flex-direction: column;
+    background-color: #121619;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .hiddenLinks a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-top: 1px solid #333;
+  }
+
+  .hiddenLinks a:first-child {
+    border-top: none;
+  }
+}
